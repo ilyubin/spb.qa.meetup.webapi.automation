@@ -1,0 +1,46 @@
+{
+  "frameworks": {
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Runtime": { "type": "build" },
+        "System.Web": { "type": "build" }
+      }
+    }
+  },
+
+  "dependencies": {
+    "NUnit": "3.5.*",
+    "dotnet-test-nunit": "3.4.0-beta-3",
+
+    "RestSharp": "105.2.*",
+
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+
+    "Serilog.Enrichers.Environment": "2.1.1",
+    "Serilog.Enrichers.Thread": "3.0.0",
+    "Serilog.Sinks.Literate": "2.0.0",
+    "Serilog.Sinks.Seq": "3.1.1",
+    "Destructurama.JsonNet": "1.0.3",
+
+    "Bogus": "8.0.3"
+  },
+
+  "testRunner": "nunit",
+
+  "configurations": {
+    "Test": {
+      "buildOptions": {
+        "define": [ "TEST" ],
+        "optimize": true
+      }
+    }
+  },
+
+  "buildOptions": {
+    "copyToOutput": [ "project.json", "config*.json" ]
+  },
+  "publishOptions": {
+    "include": [ "project.json", "config*.json" ]
+  }
+}
